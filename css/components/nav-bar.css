@@ -18,6 +18,20 @@
   color: inherit;
 }
 
+@keyframes notificationanimation {
+  0% {
+    transform: none;
+  }
+
+  50% {
+    transform: translateY(3px) rotateY(360deg);
+  }
+
+  100% {
+    transformY: none;
+  }
+}
+
 .nav__notification {
   position: absolute;
   left: 15px;
@@ -31,6 +45,32 @@
   align-items: center;
   color: white;
   font-weight: 600;
+  animation: notificationanimation 2s ease-in-out infinite;
 }
 
-.
+@keyframes appearBtnAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.nav__btn {
+  transform: translateY(50px);
+  animation: appearBtnAnimation 0.5s ease-in-out forwards;
+}
+
+.nav__btn:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.nav__btn:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.nav__btn:last-child {
+  animation-delay: 0.6s;
+}
